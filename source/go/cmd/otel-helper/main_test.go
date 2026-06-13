@@ -329,7 +329,7 @@ func TestRun_CacheHit_ResolvesTokenFromEnv(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	envToken := "***REMOVED***"
+	envToken := "***REMOVED***" // pragma: allowlist secret
 	t.Setenv("CLAUDE_CODE_MONITORING_TOKEN", envToken)
 
 	r, w, _ := os.Pipe()
